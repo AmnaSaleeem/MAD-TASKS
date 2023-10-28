@@ -1,0 +1,23 @@
+//CHAT UI
+import 'package:flutter/material.dart';
+void main() => runApp(MyChatApp());
+class MyChatApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(home: HomeScreen(),);}}
+class HomeScreen extends StatelessWidget {
+  final List<String> chatConversations = ['Mama','Papa','Saniya', 'Kinza', 'Sana','Ramsha','Zainab','Mahnoor','Ayesha','Maryam'];
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Lets Chat'),backgroundColor: Colors.pink,
+        actions: [IconButton(icon: Icon(Icons.search),onPressed: () {},),
+          IconButton(icon: Icon(Icons.settings),onPressed: () {},),
+          IconButton( icon: Icon(Icons.exit_to_app),onPressed: () {},),],),
+      body: ListView.builder(
+        itemCount: chatConversations.length,
+        itemBuilder: (context, index) {
+          final chatPartner = chatConversations[index];
+          return ListTile(
+            leading: CircleAvatar(child: Text(chatPartner[0]),),title: Text(chatPartner),subtitle: Text('Last message...'),);},),);}}
+       
