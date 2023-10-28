@@ -1,4 +1,4 @@
-//CHAT UI
+
 import 'package:flutter/material.dart';
 void main() => runApp(MyChatApp());
 class MyChatApp extends StatelessWidget {
